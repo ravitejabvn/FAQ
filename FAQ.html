@@ -1,0 +1,194 @@
+<html>
+<head>
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    
+	<script src="assets/js/jquery.min.js"></script>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		var searchTxt;
+    		var txtArr = [];
+    		var splitTxt = "";
+    		$("#txtSearch").keyup(function(e){
+    			searchTxt = $(this).val().trim();
+    			splitTxt = searchTxt.split(" ");
+    			if(e.keyCode != 32 && searchTxt.trim() != ""){
+    			$(".panel").find(".collapse").removeClass("in");
+    				$(".panel-group .panel-body:contains("+searchTxt.trim()+")").parents(".panel").find(".collapse").addClass("in");
+	    			for(var t=0; t<splitTxt.length; t++){
+	    				$(".panel-group .panel-body:contains("+splitTxt[t]+")").parents(".panel").find(".collapse").addClass("in");
+	    			}
+    			}
+    			if(searchTxt == ""){
+    				$(".panel").find(".collapse").removeClass("in");
+    				$(".panel:eq(0)").find(".collapse").addClass('in');
+    			}
+    			// splitTxt = searchTxt.split(" ");
+    			// if(e.keyCode == 32){
+    			// 	for(var st=0; st<splitTxt.length; st++){
+    			// 		if(txtArr.indexOf(splitTxt[st]) == -1 && splitTxt[st] != ""){
+    			// 			txtArr.push(splitTxt[st]);
+    			// 		}
+    			// 	}
+    			// 	for (var t = 0; t < txtArr.length; t++) {
+	    		// 		$(".panel").find(".collapse").removeClass("in");
+	    		// 		$(".panel-group .panel-body:contains("+txtArr[t]+")").parents(".panel").find(".collapse").addClass("in");
+	    		// 	}
+    			// }    			
+    		});
+    	});
+    </script>
+</head>
+<body>
+	<div class="container">
+		<div class="row" style="margin-top:50px;">
+			<div class="col-md-9">
+				<input type="text" placeholder="enter the text you want to find out" class="form-control" id="txtSearch"><br/>
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					<div class="panel panel-primary">
+				    	<div class="panel-heading" >
+				      		<h4 class="panel-title">
+				        		<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+				          			FAQ 1
+				        		</a>
+				      		</h4>
+				    	</div>
+				    	<div id="collapseOne" class="panel-collapse collapse in">
+				      		<div class="panel-body">
+				      			div one
+				      		</div>
+				    	</div>
+				    </div>
+				    <div class="panel panel-primary">
+					    <div class="panel-heading">
+					      <h4 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+					          FAQ 2
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseTwo" class="panel-collapse collapse">
+					      <div class="panel-body">
+					      		is used as the separator, the string is split between
+					       </div>
+					    </div>
+				  	</div>
+				  	<div class="panel panel-primary">
+					    <div class="panel-heading">
+					      <h4 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+					          FAQ 3
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseThree" class="panel-collapse collapse">
+					      <div class="panel-body">
+					      div three
+					       </div>
+					    </div>
+				  	</div>
+				  	<div class="panel panel-primary">
+					    <div class="panel-heading">
+					      <h4 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+					          FAQ 4
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseFour" class="panel-collapse collapse">
+					      <div class="panel-body">
+					      div four
+					       </div>
+					    </div>
+				  	</div>
+				  	<div class="panel panel-primary">
+					    <div class="panel-heading">
+					      <h4 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+					          FAQ 5
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseFive" class="panel-collapse collapse">
+					      <div class="panel-body">
+					      div five
+					       </div>
+					    </div>
+				  	</div>
+				  	<div class="panel panel-primary">
+					    <div class="panel-heading">
+					      <h4 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+					          FAQ 6
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapse6" class="panel-collapse collapse">
+					      <div class="panel-body">
+					      div six
+					       </div>
+					    </div>
+				  	</div>
+				  	<div class="panel panel-primary">
+					    <div class="panel-heading">
+					      <h4 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+					          FAQ 7
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapse7" class="panel-collapse collapse">
+					      <div class="panel-body">
+					      div 7
+					       </div>
+					    </div>
+				  	</div>
+				  	<div class="panel panel-primary">
+					    <div class="panel-heading">
+					      <h4 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">
+					          FAQ 8
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapse8" class="panel-collapse collapse">
+					      <div class="panel-body">
+					      div 8
+					       </div>
+					    </div>
+				  	</div>
+				  	<div class="panel panel-primary">
+					    <div class="panel-heading">
+					      <h4 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">
+					          FAQ 9
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapse9" class="panel-collapse collapse">
+					      <div class="panel-body">
+					      div 9
+					       </div>
+					    </div>
+				  	</div>
+				  	<div class="panel panel-primary">
+					    <div class="panel-heading">
+					      <h4 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">
+					          FAQ 10
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapse10" class="panel-collapse collapse">
+					      <div class="panel-body">
+					      div 10
+					       </div>
+					    </div>
+				  	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
